@@ -1,0 +1,103 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow-x: hidden; /* Menghilangkan scroll horizontal */
+}
+
+.background {
+    position: fixed; /* Menggunakan fixed agar gambar latar belakang tetap terlihat saat di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Path relatif dari styles.css ke gambar latar belakang */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Letakkan div ini di belakang konten lainnya */
+}
+
+.container {
+    max-width: 600px; /* Menentukan lebar maksimum kontainer agar tetap terlihat baik */
+    margin: 50px auto; /* Margin atas dan bawah untuk menyusun kontainer di tengah halaman */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Menggunakan alpha channel untuk sedikit transparansi */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px; /* Memberikan margin bawah untuk memisahkan input dari elemen lainnya */
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Menghitung lebar input dengan margin dan padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Memastikan lebar input termasuk padding dan border */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 2.0em;
+    color: #ca1e1e;
+    font-weight: bolder;
+}
+
+#khodamTitle {
+    margin-top: 20px; /* Memberikan margin atas untuk memisahkan judul dari hasil */
+}
+
+#historyTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#historyTable th, #historyTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+#historyTable th {
+    background-color: #f2f2f2;
+}
